@@ -31,10 +31,9 @@ class Television:
                 self.__muted = True
             else:
                 self.__muted = False
-
     def channel_up(self) -> None:
         """
-        Method to increase the channel.
+        Method to increase the tv channel.
         """
         if self.__status:
             if self.__channel < Television.MAX_CHANNEL:
@@ -64,7 +63,7 @@ class Television:
 
     def volume_down(self) -> None:
         """
-        Method to down up the volume a single level and,
+        Method to turn down the volume a single level and,
         if muted, to unmute and then turn down volume a single level
         """
         if self.__status:
@@ -74,8 +73,8 @@ class Television:
 
     def __str__(self) -> str:
         """
-        Method to show the tv status.
-        :return: tv status.
+        Method to display the tv status, channel, and volume.
+        :return: display of tv status, channel, and volume.
         """
         if self.__muted:
             return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}'
